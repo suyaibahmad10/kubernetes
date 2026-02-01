@@ -1,0 +1,16 @@
+# traffice generator app to the ip addresses
+# use case of cluster Ip
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: traffic-generator
+  labels:
+    app: traffic-generator
+spec:
+  containers:
+    - name: traffic-generator
+      image: lmacademy/traffic-generator:1.0.0
+      args:
+        - '10.102.96.136/api'
+        - '0.5'
