@@ -10,3 +10,6 @@
  # manually annotate
  kc annotate deployment nginx-deployment "kubernetes.io/change-cause"="update nginx tag to nginx:1.27.2"
 ```
+
+kc rollout status deploy/<deployment-name>
+kc describe deploy <deployment-name>

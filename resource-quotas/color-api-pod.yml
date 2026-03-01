@@ -4,7 +4,7 @@ metadata:
   name: color-api
   namespace: dev
   labels:
-    app.kubernetes.io/name: color-api
+    app: color-api
 spec:
   containers:
   - name: color-api

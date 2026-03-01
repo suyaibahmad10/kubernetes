@@ -21,3 +21,6 @@ requests.cpu     0     1
 requests.memory  0     1Gi
 ```
 
+## Issue when we create deployment with limited resources.
+Since deployment create pod will rollingupdate when image is changed so it may be possible that replicas are less since resource quotas may be exhausted.
+Error will be in replicaset level all the quota error and not on deployment.
