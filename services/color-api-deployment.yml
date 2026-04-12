@@ -13,8 +13,10 @@ spec:
     metadata:
       labels:
         app: color-api
-    
-    spec:
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/agent-inject-env-COLORDB_USER: "secret/data/k8s_secret#color-api_username"
+        vault.hashicorp.com/agent-inject-env-COLORDB_PASS: "secret/data/k8s_secret#color-api_password"
       containers:
         - name: color-api
           image: lmacademy/color-api:1.1.0
